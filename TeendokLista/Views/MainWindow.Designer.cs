@@ -59,22 +59,25 @@
             this.újFeladatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(533, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // újFeladatToolStripMenuItem
             // 
             this.újFeladatToolStripMenuItem.Name = "újFeladatToolStripMenuItem";
-            this.újFeladatToolStripMenuItem.Size = new System.Drawing.Size(99, 29);
+            this.újFeladatToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
             this.újFeladatToolStripMenuItem.Text = "Új feladat";
+            this.újFeladatToolStripMenuItem.Click += new System.EventHandler(this.újFeladatToolStripMenuItem_Click);
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(13, 37);
+            this.checkedListBox1.Location = new System.Drawing.Point(9, 24);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(200, 403);
+            this.checkedListBox1.Size = new System.Drawing.Size(135, 259);
             this.checkedListBox1.TabIndex = 1;
             this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
@@ -94,7 +97,8 @@
             this.tableLayoutPanel1.Controls.Add(this.textBoxCim, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxReszletek, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxElvegezve, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 36);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 23);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -102,93 +106,103 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(565, 367);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 239);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sorszám";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 40);
+            this.label2.Location = new System.Drawing.Point(2, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Létrehozás Dátuma";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 80);
+            this.label3.Location = new System.Drawing.Point(2, 52);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 20);
+            this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Cím";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 120);
+            this.label4.Location = new System.Drawing.Point(2, 78);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Részletek";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 323);
+            this.label5.Location = new System.Drawing.Point(2, 210);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Elvégezve";
             // 
             // labelSorszam
             // 
             this.labelSorszam.AutoSize = true;
-            this.labelSorszam.Location = new System.Drawing.Point(200, 0);
+            this.labelSorszam.Location = new System.Drawing.Point(133, 0);
+            this.labelSorszam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSorszam.Name = "labelSorszam";
-            this.labelSorszam.Size = new System.Drawing.Size(105, 20);
+            this.labelSorszam.Size = new System.Drawing.Size(69, 13);
             this.labelSorszam.TabIndex = 0;
             this.labelSorszam.Text = "labelSorszam";
             // 
             // labelDatum
             // 
             this.labelDatum.AutoSize = true;
-            this.labelDatum.Location = new System.Drawing.Point(200, 40);
+            this.labelDatum.Location = new System.Drawing.Point(133, 26);
+            this.labelDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(90, 20);
+            this.labelDatum.Size = new System.Drawing.Size(60, 13);
             this.labelDatum.TabIndex = 0;
             this.labelDatum.Text = "labelDatum";
             // 
             // textBoxCim
             // 
-            this.textBoxCim.Location = new System.Drawing.Point(200, 83);
+            this.textBoxCim.Location = new System.Drawing.Point(133, 54);
+            this.textBoxCim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCim.Name = "textBoxCim";
-            this.textBoxCim.Size = new System.Drawing.Size(362, 26);
+            this.textBoxCim.Size = new System.Drawing.Size(242, 20);
             this.textBoxCim.TabIndex = 1;
             // 
             // richTextBoxReszletek
             // 
-            this.richTextBoxReszletek.Location = new System.Drawing.Point(200, 123);
+            this.richTextBoxReszletek.Location = new System.Drawing.Point(133, 80);
+            this.richTextBoxReszletek.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBoxReszletek.Name = "richTextBoxReszletek";
-            this.richTextBoxReszletek.Size = new System.Drawing.Size(362, 197);
+            this.richTextBoxReszletek.Size = new System.Drawing.Size(242, 128);
             this.richTextBoxReszletek.TabIndex = 2;
             this.richTextBoxReszletek.Text = "";
             // 
             // checkBoxElvegezve
             // 
             this.checkBoxElvegezve.AutoSize = true;
-            this.checkBoxElvegezve.Location = new System.Drawing.Point(200, 326);
+            this.checkBoxElvegezve.Location = new System.Drawing.Point(133, 212);
+            this.checkBoxElvegezve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxElvegezve.Name = "checkBoxElvegezve";
-            this.checkBoxElvegezve.Size = new System.Drawing.Size(22, 21);
+            this.checkBoxElvegezve.Size = new System.Drawing.Size(15, 14);
             this.checkBoxElvegezve.TabIndex = 3;
             this.checkBoxElvegezve.UseVisualStyleBackColor = true;
             // 
@@ -196,9 +210,10 @@
             // 
             this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(220, 37);
+            this.panel1.Location = new System.Drawing.Point(147, 24);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(568, 403);
+            this.panel1.Size = new System.Drawing.Size(379, 262);
             this.panel1.TabIndex = 3;
             // 
             // menuStrip2
@@ -209,31 +224,35 @@
             this.törlésToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(568, 33);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip2.Size = new System.Drawing.Size(379, 24);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // szerkesztésToolStripMenuItem
             // 
             this.szerkesztésToolStripMenuItem.Name = "szerkesztésToolStripMenuItem";
-            this.szerkesztésToolStripMenuItem.Size = new System.Drawing.Size(113, 29);
-            this.szerkesztésToolStripMenuItem.Text = "Szerkesztés";
+            this.szerkesztésToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
+            this.szerkesztésToolStripMenuItem.Text = "Mentés";
+            this.szerkesztésToolStripMenuItem.Click += new System.EventHandler(this.szerkesztésToolStripMenuItem_Click);
             // 
             // törlésToolStripMenuItem
             // 
             this.törlésToolStripMenuItem.Name = "törlésToolStripMenuItem";
-            this.törlésToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.törlésToolStripMenuItem.Size = new System.Drawing.Size(49, 22);
             this.törlésToolStripMenuItem.Text = "Törlés";
+            this.törlésToolStripMenuItem.Click += new System.EventHandler(this.törlésToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.Load += new System.EventHandler(this.MainWindow_Load);

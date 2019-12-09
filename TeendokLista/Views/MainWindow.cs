@@ -24,7 +24,13 @@ namespace TeendokLista.Views
         }
 
         public feladat feladat {
-            get => throw new NotImplementedException();
+
+            get
+            {
+                int id = int.Parse(labelSorszam.Text);
+                DateTime datum = DateTime.Parse(labelDatum.Text);                
+                return new feladat(id, textBoxCim.Text, datum, richTextBoxReszletek.Text, checkBoxElvegezve.Checked);
+            }
             set
             {
                 labelSorszam.Text = value.Id.ToString();
@@ -90,5 +96,26 @@ namespace TeendokLista.Views
                 }
             }
         }
+
+        private void szerkesztésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            presenter.SaveFeladat();
+
+        }
+
+        private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(checkedListBox1.SelectedValue.ToString());
+            
+            presenter.DeleteFeladat(id);
+        }
+
+        private void újFeladatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            presenter.CreateFeladat();
+            checkedListBox1.ClearSelected();
+        }
+
+
     }
 }

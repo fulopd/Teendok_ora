@@ -69,6 +69,7 @@
     <Compile Include="Models\felhasznalo.cs">
       <DependentUpon>TeendokModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Partials\Feladat-Partial.cs" />
     <Compile Include="Models\TeendokModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +89,8 @@
     <Compile Include="Presenters\MainWindowPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CurrentUser.cs" />
+    <Compile Include="Services\Hash.cs" />
     <Compile Include="ViewInterfaces\ILoginView.cs" />
     <Compile Include="ViewInterfaces\IMainWindowView.cs" />
     <Compile Include="Views\Login.cs">

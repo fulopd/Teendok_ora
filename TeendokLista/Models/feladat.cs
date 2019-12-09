@@ -22,5 +22,6 @@ namespace TeendokLista.Models
         public int felhasznaloId { get; set; }
     
         public virtual felhasznalo felhasznalo { get; set; }
+
     }
 }

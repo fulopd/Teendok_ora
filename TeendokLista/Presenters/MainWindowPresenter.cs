@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TeendokLista.Models;
+using TeendokLista.Services;
 using TeendokLista.ViewInterfaces;
 
 namespace TeendokLista.Presenters
@@ -62,6 +63,70 @@ namespace TeendokLista.Presenters
 
                 throw;
             }
+        }
+
+        public void SaveFeladat() {
+
+            var feladat = view.feladat;
+            //Jelenlegi felhasználó id -ja
+            feladat.felhasznaloId = CurrentUser.Id;
+
+            var letezik = db.feladat.Find(feladat.Id);
+            //modositas
+            if (letezik != null)
+            {
+                //a memoriaba a dupla erteket kiszedi
+                db.Entry(letezik).State = EntityState.Detached;
+                //modositom a dbContextben
+                db.Entry(feladat).State = EntityState.Modified;
+            }
+            //Új létrehozas
+            else
+            {
+                db.feladat.Add(feladat);
+            }
+
+            try
+            {
+                //Adatbázisba mentjük a változásokat
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            // megjelenő lista frissítése
+            LoadData();
+        }
+
+        public void CreateFeladat() {
+
+            int id = db.feladat
+                .Select(x => x.Id)
+                //ha üres a tábla akkor 0 -át ad vissza tehát 1 lesz az első Id
+                .DefaultIfEmpty(0)
+                .Max() + 1;
+            view.feladat = new feladat(id, null, DateTime.Now, null, false);
+        }
+
+        public void DeleteFeladat(int id) {
+
+            var feladat = db.feladat.Find(id);
+            if (feladat != null)
+            {
+                //dbContextből kiszedte
+                db.feladat.Remove(feladat);
+            }
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            LoadData();
         }
     }
 }

@@ -45,5 +45,10 @@ namespace TeendokLista.Views
                 buttonBelepes.PerformClick();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            presenter.CheckConnection();
+        }
     }
 }

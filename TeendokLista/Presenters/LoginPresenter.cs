@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TeendokLista.Models;
+using TeendokLista.Services;
 using TeendokLista.ViewInterfaces;
 
 namespace TeendokLista.Presenters
@@ -24,6 +25,14 @@ namespace TeendokLista.Presenters
             return db.Database.Exists();
         }
 
+        public void CheckConnection() {
+
+            if (!ConnectionExist())
+            {
+                view.ErrorMessage = "Adatbázishoz való kapcsolódás sikertelen!";
+            }
+        }
+
         public void Authenticate()
         {
             if (!ConnectionExist())
@@ -41,6 +50,7 @@ namespace TeendokLista.Presenters
                 if (user != null)
                 {
                     LoginSucces = true;
+                    CurrentUser.Id = user.Id;
                 }
                 else
                 {
